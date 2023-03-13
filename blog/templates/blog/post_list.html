@@ -5,7 +5,19 @@
     <title>Blog dla programistów</title>
 </head>
 <body>
-<h1>Witamy na stronie bloga dla programistów</h1>
-<h1>Witamy na stronie bloga dla programistów</h1>
+<div>
+    <h1>Witamy na stronie bloga dla programistów</h1>
+</div>
+
+    {% for post in posts %}
+<div>
+    <p>opublikowany: {{ post.published_date }}</p>
+    <h2><a href="">{{ post.title }}</a> </h2>
+    <em>{{ post.text|linebreaksbr }}</em>
+</div>
+    {% endfor %}
+<div>
+
+</div>
 </body>
 </html>
